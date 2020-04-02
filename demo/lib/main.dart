@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './model/post.dart';
 
 // 入口文件
 // void 不返回值
@@ -11,17 +12,25 @@ class MyApp extends StatelessWidget {
     return new MaterialApp(
         title: 'Welcome to Flutter',
         // Scaffold部分有页面顶部底部工具栏
-        home: new Scaffold(
-          appBar: new AppBar(
-            title: new Text(Strings.hello),
-          ),
-          body: new Column(
-            children: <Widget>[
-              Hello(),
-            ],
-          ),
-        ),
-        theme: ThemeData.dark());
+        home: Home(),
+        theme: ThemeData.light());
+  }
+}
+
+class Home extends StatelessWidget {
+  Widget _listItemBuilder(BuildContext context, int index) {
+    return Text(posts[index].title);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return new Scaffold(
+      appBar: new AppBar(
+        title: new Text(Strings.hello),
+      ),
+      body: ListView.builder(
+          itemCount: posts.length, itemBuilder: _listItemBuilder),
+    );
   }
 }
 
