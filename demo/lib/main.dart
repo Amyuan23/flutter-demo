@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+
 // 入口文件
-void main() => runApp(new MyApp());
+// void 不返回值
+void main() => runApp(new MyApp()); // runApp挂载根
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    //
     return new MaterialApp(
       title: 'Welcome to Flutter',
       home: new Scaffold(
@@ -13,11 +16,18 @@ class MyApp extends StatelessWidget {
         ),
         body: new Column(
           children: <Widget>[
-            Fade(),
+            // Fade(),
+            Center(
+              child: Text(
+                'kkki kk',
+                textDirection: TextDirection.ltr,
+                style: TextStyle(),
+              ),
+            ),
             Container(
-            height: 0.5,
-            color: Color(0xFFEFF1F6),
-          ),
+              height: 0.5,
+              color: Color(0xFFEFF1F6),
+            ),
           ],
         ),
       ),
@@ -32,15 +42,15 @@ class Fade extends StatefulWidget {
   _FadeState createState() => _FadeState();
 }
 
-class _FadeState extends State<Fade>
-    with SingleTickerProviderStateMixin {
+class _FadeState extends State<Fade> with SingleTickerProviderStateMixin {
   AnimationController _controller;
   CurvedAnimation curve;
 
   @override
   void initState() {
     super.initState();
-    _controller = AnimationController(duration: const Duration(milliseconds: 2000),vsync: this);
+    _controller = AnimationController(
+        duration: const Duration(milliseconds: 2000), vsync: this);
     curve = CurvedAnimation(parent: _controller, curve: Curves.easeIn);
   }
 
@@ -73,8 +83,6 @@ class _FadeState extends State<Fade>
     );
   }
 }
-
-
 
 // class Card extends StatelessWidget {
 //   Card({@required this.index,@required this.onPress});
