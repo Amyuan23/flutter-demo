@@ -23,7 +23,17 @@ class Home extends StatelessWidget {
     return new Scaffold(
       backgroundColor: Colors.grey[100],
       appBar: new AppBar(
+        leading: IconButton(
+            icon: Icon(Icons.menu),
+            tooltip: 'Navigration',
+            onPressed: () => debugPrint('menu')),
         title: new Text(Strings.hello),
+        actions: <Widget>[
+          IconButton(
+              icon: Icon(Icons.search),
+              tooltip: 'Navigration',
+              onPressed: () => debugPrint('search'))
+        ],
       ),
       body: ListDemo(),
     );
@@ -32,5 +42,5 @@ class Home extends StatelessWidget {
 
 // 静态字段系统
 class Strings {
-  static String hello = 'hello';
+  static String hello = 'HELLO';
 }
