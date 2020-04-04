@@ -47,6 +47,14 @@ class Home extends StatelessWidget {
             Icon(Icons.radio, size: 128, color: Colors.black12),
             Icon(Icons.record_voice_over, size: 128, color: Colors.black12),
           ]),
+          drawer: Container(
+            color: Colors.white,
+            padding: EdgeInsets.all(10),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[Text('drawer drawer')],
+            ),
+          ),
         ));
   }
 }
