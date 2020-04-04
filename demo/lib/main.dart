@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-// import './demo/list.dart';
+import './demo/drawer.dart';
 
 // 入口文件
 // void 不返回值
@@ -47,49 +47,7 @@ class Home extends StatelessWidget {
             Icon(Icons.radio, size: 128, color: Colors.black12),
             Icon(Icons.record_voice_over, size: 128, color: Colors.black12),
           ]),
-          drawer: Drawer(
-            child: ListView(
-              padding: EdgeInsets.zero,
-              children: <Widget>[
-                DrawerHeader(
-                  child: Text('header'.toUpperCase()),
-                ),
-                ListTile(
-                  title: Text(
-                    'message',
-                    textAlign: TextAlign.right,
-                  ),
-                  trailing: Icon(
-                    Icons.message,
-                    color: Colors.black12,
-                    size: 22,
-                  ),
-                ),
-                ListTile(
-                  title: Text(
-                    'favorite',
-                    textAlign: TextAlign.right,
-                  ),
-                  trailing: Icon(
-                    Icons.favorite,
-                    color: Colors.black12,
-                    size: 22,
-                  ),
-                ),
-                ListTile(
-                  title: Text(
-                    'settings',
-                    textAlign: TextAlign.right,
-                  ),
-                  trailing: Icon(
-                    Icons.settings,
-                    color: Colors.black12,
-                    size: 22,
-                  ),
-                )
-              ],
-            ),
-          ),
+          drawer: DrawerDemo(),
         ));
   }
 }
