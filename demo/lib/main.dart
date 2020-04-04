@@ -20,23 +20,34 @@ class MyApp extends StatelessWidget {
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      backgroundColor: Colors.grey[100],
-      appBar: new AppBar(
-        leading: IconButton(
-            icon: Icon(Icons.menu),
-            tooltip: 'Navigration',
-            onPressed: () => debugPrint('menu')),
-        title: new Text(Strings.hello),
-        actions: <Widget>[
-          IconButton(
-              icon: Icon(Icons.search),
-              tooltip: 'Navigration',
-              onPressed: () => debugPrint('search'))
-        ],
-      ),
-      body: ListDemo(),
-    );
+    return DefaultTabController(
+        length: 3,
+        child: new Scaffold(
+          backgroundColor: Colors.grey[100],
+          appBar: new AppBar(
+            leading: IconButton(
+                icon: Icon(Icons.menu),
+                tooltip: 'Navigration',
+                onPressed: () => debugPrint('menu')),
+            title: new Text(Strings.hello),
+            actions: <Widget>[
+              IconButton(
+                  icon: Icon(Icons.search),
+                  tooltip: 'Navigration',
+                  onPressed: () => debugPrint('search'))
+            ],
+            bottom: TabBar(tabs: <Widget>[
+              Tab(icon: Icon(Icons.send)),
+              Tab(icon: Icon(Icons.radio)),
+              Tab(icon: Icon(Icons.record_voice_over))
+            ]),
+          ),
+          body: TabBarView(children: <Widget>[
+            Icon(Icons.send, size: 128, color: Colors.black12),
+            Icon(Icons.radio, size: 128, color: Colors.black12),
+            Icon(Icons.record_voice_over, size: 128, color: Colors.black12),
+          ]),
+        ));
   }
 }
 
