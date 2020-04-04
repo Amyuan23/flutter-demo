@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './demo/drawer.dart';
+import './demo/bottom_bar.dart';
 
 // 入口文件
 // void 不返回值
@@ -48,6 +49,7 @@ class Home extends StatelessWidget {
             Icon(Icons.record_voice_over, size: 128, color: Colors.black12),
           ]),
           drawer: DrawerDemo(),
+          bottomNavigationBar: BottomBarDemo(),
         ));
   }
 }
