@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './demo/list.dart';
 import './demo/drawer.dart';
 import './demo/bottom_bar.dart';
 
@@ -44,7 +45,7 @@ class Home extends StatelessWidget {
             ]),
           ),
           body: TabBarView(children: <Widget>[
-            Icon(Icons.send, size: 128, color: Colors.black12),
+            ListDemo(),
             Icon(Icons.radio, size: 128, color: Colors.black12),
             Icon(Icons.record_voice_over, size: 128, color: Colors.black12),
           ]),
