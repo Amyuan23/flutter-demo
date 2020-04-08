@@ -3,6 +3,7 @@ import './demo/list.dart';
 import './demo/drawer.dart';
 import './demo/bottom_bar.dart';
 import './demo/basic.dart';
+import './demo/layout.dart';
 
 // 入口文件
 // void 不返回值
@@ -48,7 +49,7 @@ class Home extends StatelessWidget {
           body: TabBarView(children: <Widget>[
             ListDemo(),
             BasicDemo(),
-            Icon(Icons.record_voice_over, size: 128, color: Colors.black12),
+            LayoutDemo(),
           ]),
           drawer: DrawerDemo(),
           bottomNavigationBar: BottomBarDemo(),
