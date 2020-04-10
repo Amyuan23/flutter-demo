@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import './demo/list.dart';
 import './demo/drawer.dart';
 import './demo/bottom_bar.dart';
-import './demo/basic.dart';
+import './demo/view.dart';
 import './demo/layout.dart';
 
 // 入口文件
@@ -48,7 +48,7 @@ class Home extends StatelessWidget {
           ),
           body: TabBarView(children: <Widget>[
             ListDemo(),
-            BasicDemo(),
+            ViewDemo(),
             LayoutDemo(),
           ]),
           drawer: DrawerDemo(),
