@@ -3,7 +3,15 @@ import 'package:flutter/material.dart';
 class LayoutDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Row(children: <Widget>[IconBadge(Icons.access_alarm)]);
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround, // 主轴
+      crossAxisAlignment: CrossAxisAlignment.end, // 交叉轴
+      children: <Widget>[
+        IconBadge(Icons.access_alarm),
+        IconBadge(Icons.access_alarm),
+        IconBadge(Icons.access_alarm)
+      ],
+    );
   }
 }
 
