@@ -2,6 +2,32 @@ import 'package:flutter/material.dart';
 import '../model/post.dart';
 
 class ViewDemo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return GridViewDemo();
+  }
+}
+
+class GridViewDemo extends StatelessWidget {
+  List<Widget> _buildItem(int length) {
+    return List.generate(length, (int index) {
+      return Container(
+
+          // child:
+          );
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return GridView.count(
+      crossAxisCount: 3,
+      children: _buildItem(10),
+    );
+  }
+}
+
+class PageViewBuilderDemo extends StatelessWidget {
   Widget _itemBuilder(BuildContext context, int index) {
     return Stack(
       children: <Widget>[
