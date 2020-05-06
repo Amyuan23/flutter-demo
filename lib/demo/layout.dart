@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './noticeList.dart';
 
 class LayoutDemo extends StatelessWidget {
   @override
@@ -7,6 +8,12 @@ class LayoutDemo extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceAround, // 主轴
       crossAxisAlignment: CrossAxisAlignment.end, // 交叉轴
       children: <Widget>[
+        FlatButton(
+            onPressed: () {
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (BuildContext context) => Page()));
+            },
+            child: Text('系统通知')),
         IconBadge(Icons.access_alarm),
         IconBadge(Icons.access_alarm),
         IconBadge(Icons.access_alarm)
