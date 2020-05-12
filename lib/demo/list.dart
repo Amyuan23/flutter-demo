@@ -14,11 +14,11 @@ class ListDemo extends StatelessWidget {
           ),
           Text(
             posts[index].title,
-            style: Theme.of(context).textTheme.title,
+            // style: Theme.of(context).textTheme.title,
           ),
           Text(
             posts[index].author,
-            style: Theme.of(context).textTheme.subhead,
+            // style: Theme.of(context).textTheme.subhead,
           ),
           SizedBox(
             height: 16,
